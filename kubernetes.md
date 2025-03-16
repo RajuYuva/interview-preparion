@@ -968,7 +968,7 @@ Pod priority and preemption are powerful features that help ensure that critical
   3. ReplicaSets to maintain the desired number of pods.
   4. Autoscaling (Horizontal Pod Autoscaler).
   5. Deployment across multiple Availability Zones.
-  6.Cluster Autoscaler to manage node resources.
+  6. Cluster Autoscaler to manage node resources.
   Together, these features provide fault tolerance, scalability, and self-healing.
 - This multi-AZ distribution and autoscaling make the cluster resilient and scalable.
 
@@ -989,10 +989,7 @@ Pod priority and preemption are powerful features that help ensure that critical
 ### 72. monitoring and logging with respect to kubernetes? how do you done it?
 
 **Answer:**
-- Basically we can integrate aws cloudwatch for monitoring, we can collect and monitor the logs using cloudwatch logs.
-- Additionaly we can configure specific tools like fluentD, prometheus and grafana is also one thing.
-- We can use cloudwatch container insights to gain deeper insights for containerzed applications
-  
+
 - **Monitoring:**  
   - Collect and visualize metrics using tools like Prometheus and Grafana.
 - **Logging:**  
@@ -1006,7 +1003,10 @@ Pod priority and preemption are powerful features that help ensure that critical
 ### 73. Have you ever used aws cloudwatch and explain how does it integrate with eks?
 
 **Answer:**
-
+- Basically we can integrate aws cloudwatch for monitoring, we can collect and monitor the logs using cloudwatch logs.
+- Additionaly we can configure specific tools like fluentD, prometheus and grafana is also one thing.
+- We can use cloudwatch container insights to gain deeper insights for containerzed applications
+  
 - AWS CloudWatch integrates with EKS by:
   1. Collecting container logs using Fluent Bit or Fluentd.
   2. Capturing resource utilization metrics (CPU, memory, disk usage) via CloudWatch Container Insights.
@@ -1027,7 +1027,7 @@ Pod priority and preemption are powerful features that help ensure that critical
 
 ---
 
-### 75. how are you integrating amazon eks with cicd pipeline? consider a scenario in which I have containerd apps I want to deploy them on amazon eks using any cicd pipeline, how will you do that?
+### 75. how are you integrating amazon eks with cicd pipeline? consider a scenario in which I have containerized apps I want to deploy them on amazon eks using any cicd pipeline, how will you do that?
 
 **Answer:**
 
