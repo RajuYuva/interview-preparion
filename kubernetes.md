@@ -1127,5 +1127,9 @@ Pod priority and preemption are powerful features that help ensure that critical
 - Pod-to-pod communication in an EKS cluster is seamless because:
   1. Each pod is assigned its own IP address according to the Kubernetes networking model.
   2. The CNI plugin (e.g., Amazon VPC CNI) ensures that pods across different nodes can communicate using VPC-level networking.
-
+```sh
+Pod-to-Pod communication in an EKS cluster happens seamlessly thanks to the Kubernetes networking model,
+where each pod gets its own IP address within the cluster, and the CNI plugin (such as Amazon VPC CNI) ensures
+that pods across different nodes can communicate with each other using VPC-level networking.
+```
 ---
