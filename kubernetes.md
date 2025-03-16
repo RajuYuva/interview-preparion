@@ -887,10 +887,28 @@ close the activity
 
 - **Scenario:**  
   - Critical services (e.g., Order Service, Payment Service) must continue running even under resource constraints.
+  - In every Apps there will beHigh-Priority Workloads, Low-Priority Workloads; high workload has be run even under resource shortages
+  - Priority: Each pod gets a priority value. The higher the priority, the more important the pod is to the cluster.
+  - Preemption: If a higher-priority pod cannot be scheduled due to resource constraints, Kubernetes will try to preempt (evict) lower-priority pods to free up the necessary resources.
+
+The critical services like Order Service and Payment Service continued running smoothly even during resource pressure when we use Pod priority and preemption features.
+
+Non-critical services, such as batch processing jobs, were evicted when resources were tight, but they could always be rescheduled once resources became available.
+Pod priority and preemption are powerful features that help ensure that critical applications are not disrupted during resource shortages, making them crucial for ensuring the reliability and availability of high-priority services.
 - **Implementation:**  
   1. Assign priority values to pods (higher for critical services).
   2. If resources are scarce, Kubernetes preempts (evicts) lower-priority pods to free up resources.
 - This ensures that essential applications remain operational during high resource pressure.
+  ```yml
+  apiVersion: scheduling.k8s.io/v1
+  kind: PriorityClass
+  metadata:
+    name: high-priority #for low low-priority
+  value: 1000 #for low we need to give less value like 100 or 500
+  globalDefault: false
+  description: "Priority class for critical production workloads"
+  ```
+  - once we define the the above class we can use this class name under pod spec as : **priorityClassName: high/low-priority**
 
 ---
 
