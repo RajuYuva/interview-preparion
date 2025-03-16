@@ -451,6 +451,9 @@ close the activity
   1. Distributing the control plane across multiple Availability Zones (AZs).
   2. Using Auto Scaling Groups (ASG) for worker nodes.
 - This multi-AZ distribution and node group resiliency ensure scalability and fault tolerance.
+- Multi-AZ Worker Nodes:
+  You can deploy worker nodes in multiple Availability Zones. This distribution not only enhances fault tolerance but also improves workload availability by spreading resources           
+  geographically.
 
 ---
 
