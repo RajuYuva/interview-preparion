@@ -965,6 +965,11 @@ Pod priority and preemption are powerful features that help ensure that critical
 - EKS ensures high availability (HA) by:
   1. Distributing the control plane across multiple Availability Zones (AZs).
   2. Using Auto Scaling Groups (ASG) for worker nodes.
+  3. ReplicaSets to maintain the desired number of pods.
+  4. Autoscaling (Horizontal Pod Autoscaler).
+  5. Deployment across multiple Availability Zones.
+  6.Cluster Autoscaler to manage node resources.
+  Together, these features provide fault tolerance, scalability, and self-healing.
 - This multi-AZ distribution and autoscaling make the cluster resilient and scalable.
 
 ---
