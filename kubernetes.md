@@ -989,7 +989,10 @@ Pod priority and preemption are powerful features that help ensure that critical
 ### 72. monitoring and logging with respect to kubernetes? how do you done it?
 
 **Answer:**
-
+- Basically we can integrate aws cloudwatch for monitoring, we can collect and monitor the logs using cloudwatch logs.
+- Additionaly we can configure specific tools like fluentD, prometheus and grafana is also one thing.
+- We can use cloudwatch container insights to gain deeper insights for containerzed applications
+  
 - **Monitoring:**  
   - Collect and visualize metrics using tools like Prometheus and Grafana.
 - **Logging:**  
