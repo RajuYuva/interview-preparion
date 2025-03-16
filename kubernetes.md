@@ -1092,6 +1092,8 @@ Pod priority and preemption are powerful features that help ensure that critical
   ```
 - This configuration ensures zero-downtime updates.
 - If a deployment fails, Kubernetes can automatically or manually roll back to the previous stable version.
+- Use the **kubectl rollout undo <>** command to revert to the previous stable revision.
+-  Alternatively, if we’re using an automated deployment tool, configure it to trigger this command automatically.
 
 ---
 
