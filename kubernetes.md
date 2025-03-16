@@ -713,7 +713,7 @@ close the activity
 - HPA scales pods based on defined metrics (e.g., CPU utilization).
 - Setup involves:
   1. Configuring HPA via a YAML file.
-  2. Setting minimum and maximum replicas (e.g., 1 to 50).
+  2. Setting minimum and maximum replicas (e.g., 1 to 50), scaleTargetRef points to the actuall deployment.
   3. Defining target metrics (such as average CPU utilization).
   4. Ensuring a metrics server is running (or using Prometheus/other metrics APIs).
 
