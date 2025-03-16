@@ -804,10 +804,15 @@ close the activity
 **Answer:**
 
 - Resource limits and quotas ensure fair resource allocation and prevent resource exhaustion.
-- The process involves:
-  1. Assessing the application's CPU, memory, and other resource requirements.
-  2. Creating a ResourceQuota for a namespace.
-  3. Binding the quota to the namespace.
+- The process involves (Assessing the application's CPU, memory, and other resource requirements.):
+  1. resource quotas and limits for the name spaces that it will allow us to control the resource consumption
+  2. first all of we need to check the resource requirements of application
+  3. we need to analyze the how much resources are consuming by the application
+  4. we need to understand the cpu
+  5. we need to understand the memory
+  6. we need to understand the namespace needs
+  7. Creating a ResourceQuota for a namespace.
+  8. Binding the quota to the namespace.
 - **Example YAML:**
   ```yaml
   apiVersion: v1
