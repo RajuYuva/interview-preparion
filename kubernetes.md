@@ -291,17 +291,20 @@ communications sent about cluster upgrade activity is started...
 1. first we need to get another node group called green.
 2. taint the green nodes, so that they should not get any pods scheduled
 kubectl taint nodes ip-10-0-11-151.ec2.internal project=expense:NoSchedule
-3. now upgrade your control plane, do it from console
+3. now upgrade your control plane, do it from console -
+The control plane is upgraded first, ensuring the core management of the cluster is updated.
 
-4. upgrade green node group also to 1.30
+4. upgrade green node group also to 1.30 -
+The green node group is then upgraded to version 1.30.
 
-5. shift the workloads from 1.29 node group to 1.30 nodegroup
+5. shift the workloads from 1.29 node group to 1.30 nodegroup -
+Workloads are gradually shifted from the old (blue) node group to the new (green) one.
 
-6. cordon blue nodes
+6. cordon blue nodes - The blue nodes are cordoned to stop new scheduling
 
 7. untaint green nodes
 
-8. drain blue nodes
+8. drain blue nodes - eventually drained nodes to safely move remaining workloads off
 
 inform all stake holders, application teams. perform sanity testing
 
