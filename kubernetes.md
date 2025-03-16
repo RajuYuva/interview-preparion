@@ -282,7 +282,7 @@ Kubernetes components are divided into two parts:
   5. Testing post-upgrade to ensure functionality.
 - Managed services like EKS, GKE, or AKS simplify some of these steps but careful planning is essential.
 
-```
+``` shell
 Cluster upgrade is planned
 --------------------------
 no downtime to the existing apps but no new release and no new deployments in the upgrade time...
