@@ -282,6 +282,33 @@ Kubernetes components are divided into two parts:
   5. Testing post-upgrade to ensure functionality.
 - Managed services like EKS, GKE, or AKS simplify some of these steps but careful planning is essential.
 
+```
+Cluster upgrade is planned
+--------------------------
+no downtime to the existing apps but no new release and no new deployments in the upgrade time...
+communications sent about cluster upgrade activity is started...
+
+1. first we need to get another node group called green.
+2. taint the green nodes, so that they should not get any pods scheduled
+kubectl taint nodes ip-10-0-11-151.ec2.internal project=expense:NoSchedule
+3. now upgrade your control plane, do it from console
+
+4. upgrade green node group also to 1.30
+
+5. shift the workloads from 1.29 node group to 1.30 nodegroup
+
+6. cordon blue nodes
+
+7. untaint green nodes
+
+8. drain blue nodes
+
+inform all stake holders, application teams. perform sanity testing
+
+close the activity
+
+```
+
 ---
 
 ### 24. scaling k8s deployment?
